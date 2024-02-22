@@ -47,31 +47,31 @@ const app = {
       name: "al higuchi",
       singer: "Raftaar x Salim Merchant x Karma",
       path: "./music/song 2.mp3",
-        image: "./img/img2.png",
+      image: "./img/img2.png",
     },
     {
       name: "Naachne Ka Shaunq",
       singer: "Raftaar x Brobha V",
       path: "./music/song 3.mp3",
-        image: "./img/img3.png",
+      image: "./img/img3.png",
     },
     {
       name: "still here",
       singer: "LOL",
       path: "./music/song 4.mp3",
-        image: "./img/img4.png",
+      image: "./img/img4.png",
     },
     {
       name: "Hiroyuki Sawano",
       singer: "vanguard sound",
       path: "./music/song 5.mp3",
-        image: "./img/img5.png",
+      image: "./img/img5.png",
     },
     {
       name: "Haiiro no Saga",
       singer: "ChouCho",
       path: "./music/song 6.mp3",
-        image: "./img/img6.png",
+      image: "./img/img6.png",
     },
   ],
   playedSongs: [],
@@ -171,7 +171,7 @@ const app = {
     audio.onplay = function () {
       // Xử lý thanh progress cập nhật theo thời gian thật
       setInterval(() => {
-          if (audio.duration) {
+        if (audio.duration) {
           var progressPercent = Math.floor(
             (audio.currentTime * 100) / audio.duration
           );
@@ -203,7 +203,7 @@ const app = {
       }
     };
     // Xử lý khi thay đổi tiến độ bài hát khi click
-      progress.onchange = function (e) {
+    progress.onchange = function (e) {
       const seekTime = Math.floor((audio.duration / 100) * e.target.value);
       audio.currentTime = seekTime;
     };
