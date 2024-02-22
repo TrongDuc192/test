@@ -171,7 +171,7 @@ const app = {
     audio.onplay = function () {
       // Xử lý thanh progress cập nhật theo thời gian thật
       setInterval(() => {
-        if (audio.duration) {
+          if (audio.duration) {
           var progressPercent = Math.floor(
             (audio.currentTime * 100) / audio.duration
           );
@@ -203,7 +203,7 @@ const app = {
       }
     };
     // Xử lý khi thay đổi tiến độ bài hát khi click
-    progress.onchange = function (e) {
+      progress.onchange = function (e) {
       const seekTime = Math.floor((audio.duration / 100) * e.target.value);
       audio.currentTime = seekTime;
     };
